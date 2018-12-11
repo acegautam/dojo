@@ -1,12 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, { Fragment } from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const min = 1
+const dices = 2
+const max = (dices || 1) * 6
+const roll = Math.floor(Math.random()*(max - min + 1)) + min
+const playAgain = (roll === 12)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const Greet = (props) => 
+    <Fragment>    
+        <h2>Hello { props.name } </h2>
+        <p className='para'>You rolled a { roll }</p>
+    </Fragment>
+
+ReactDOM.render( <Greet name='Batman' />, document.querySelector('#root'))
