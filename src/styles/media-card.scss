@@ -1,0 +1,30 @@
+@import './colors.scss';
+
+.media-card {
+    // width: 450px;
+    .card {
+        width: 50%;
+        margin: 0px auto;
+
+        .fav, .stars {
+            color: $gray-lighter;
+            cursor: pointer;
+            font-size: 2em;
+        }
+        .faved {
+            color: $pink;
+        }
+        .starred {
+            color: $yellow;
+        }
+        .stars-text {
+            display: block;
+        }
+    }
+    img {
+        align-self: center;
+    }
+    .card-desc {
+        margin: 20px 0;
+    }
+}
