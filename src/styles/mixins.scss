@@ -1,0 +1,11 @@
+// Random color generator
+@mixin colorize($index) {
+    $colors: #d9534f, #f0ad4e, #5cb85c, #0275d8, #5bc0de, #613d7c;
+    $colIndex: 0;
+    @if($index < 7) {
+        $colIndex: $index
+    } @else {
+        $colIndex: random(6)
+    }
+    background-color: nth($colors, $colIndex)
+}

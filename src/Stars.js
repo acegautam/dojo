@@ -12,9 +12,9 @@ class Stars extends Component {
     }
 
     addStars() {
-        this.setState({
-            stars: this.state.stars + 1
-        })
+        this.setState(state => ({
+            stars: state.stars + 1
+        }))
     }
 
     render() {
@@ -22,7 +22,9 @@ class Stars extends Component {
         return (
             <div className='float-left'>
                 <i className={starsClass} onClick={this.addStars} />
-                <small className='stars-text text-muted'>{this.state.stars} stars</small>
+                {this.state.stars > 0 &&
+                    <small className='stars-text text-muted'>{this.state.stars} stars</small>
+                }
             </div>
         )
     }

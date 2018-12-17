@@ -1,0 +1,13 @@
+@import './colors.scss';
+
+.rx-app {
+    min-height: 100vh;
+    background-color: $bg-light;
+
+    .text-small {
+        font-size: 0.9em;
+        a {
+            color: $gray-light;
+        }
+    }
+}

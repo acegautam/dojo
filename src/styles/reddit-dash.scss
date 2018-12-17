@@ -1,0 +1,27 @@
+@import './colors.scss';
+@import './mixins.scss';
+
+.dashboard {
+    background-color: $bg-light;
+    .post {
+        .lead {
+            font-size: 1em;
+            color: $purple;
+            margin-bottom: 10px;
+        }
+
+        .score {
+            @include colorize(10);
+            // @include colorize(--list-index);
+            padding: 10px 15px;
+            margin: 0px 10px;
+            color: $white;
+            min-width: 45px;
+            text-align: center;
+        }
+
+        .show-all {
+            font-size: 0.8em;
+        }
+    }
+}

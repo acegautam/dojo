@@ -13,8 +13,10 @@ class Fav extends React.Component {
     }
 
     toggleSwitch()  {
-        this.setState({
-            isFav: !this.state.isFav
+        this.setState(state => ({
+            isFav: !state.isFav
+        }), () => {
+            this.props.paintCard(this.state.isFav)
         })
     }
 
