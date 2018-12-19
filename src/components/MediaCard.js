@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import Stars from './Stars'
-import Fav from './Fav'
-import Sale from './Sale'
+import Stars from '../Stars'
+import Fav from '../Fav'
+import Sale from '../Sale'
 
-import './styles/media-card.scss'
+import '../styles/media-card.scss'
 
 class MediaCard extends Component {
     constructor(props) {

@@ -1,14 +1,13 @@
 import React from 'react'
-import ErrorBound from './common/ErrorBound'
-import Dashboard from './reddit/Dashboard'
+import Header from './core/Header';
+import Content from './core/Content';
 
 import '../styles/app.scss'
 
 const App = () => (
     <div className='rx-app'>
-        <ErrorBound>
-            <Dashboard q='reactjs' />
-        </ErrorBound>
+        <Header />
+        <Content />
     </div>
 )
 

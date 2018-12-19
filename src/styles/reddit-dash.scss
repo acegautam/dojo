@@ -24,4 +24,14 @@
             font-size: 0.8em;
         }
     }
+    .post-info {
+        padding: 3rem;
+        .media-body {
+            line-height: 1.8rem;
+        }
+        .back-btn i{
+            font-size: 2rem;
+            margin-top: -10px;
+        }
+    }
 }

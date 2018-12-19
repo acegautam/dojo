@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class PostsList extends Component {
     constructor (props) {
@@ -27,7 +28,7 @@ class PostsList extends Component {
     }
 
     render () {
-        const { posts } = this.props
+        const { q, posts, match } = this.props
         const { throttleChars, postsInBatch, currentBatch } = this.state
         const postsShown = postsInBatch * currentBatch
         const modPosts = posts.map(post => {
@@ -41,6 +42,7 @@ class PostsList extends Component {
 
         return (
             <div className='posts'>
+                <p>"{ q }" related posts [{ posts.length }]</p>
                 <div className='my-3 p-3 bg-white rounded shadow-sm'>
                     <h6 className='border-bottom border-gray pb-2 mb-0'>Recent posts</h6>
                     {modPosts.map((post, idx) => (
@@ -49,7 +51,7 @@ class PostsList extends Component {
                             <div className='media-body pb-3 mb-0 small lh-125 border-bottom border-gray'>
                                 <strong className='d-block text-gray-dark'>@{ post.author }</strong>
                                 <p className='lead'>
-                                    { post.title }
+                                    <Link to={`${match.path}/${ post.id }`}>{ post.title }</Link>
                                     <span className="badge badge-pill badge-info float-right" title={`${post.num_comments} comments`}>
                                         { post.num_comments }
                                     </span>

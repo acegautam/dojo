@@ -10,4 +10,12 @@
             color: $gray-light;
         }
     }
+
+    .home {
+        .action-btns {
+            a {
+                margin: 0 5px;
+            }
+        }
+    }
 }
